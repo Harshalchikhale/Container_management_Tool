@@ -104,16 +104,28 @@ function kd() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             document.getElementById("d1").innerHTML = this.responseText;
+<<<<<<< HEAD
         }
         xhttp.open("GET", "http://65.2.137.189:3000/output?cname="+ cname +"&img=" + cimg);
+=======
+	    console.log(this.responseText)
+        }
+        xhttp.open("GET", "http://44.201.198.82:3000/output?cname="+ cname +"&img=" + cimg);
+>>>>>>> 1966e9a61bf352736787565e911dbf6633a1eeb5
         xhttp.send();
     }
     function ps() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             document.getElementById("d2").innerHTML = this.responseText;
+<<<<<<< HEAD
         }
         xhttp.open("GET", "http://65.2.137.189:3000/info");
+=======
+
+        }
+        xhttp.open("GET", "http://44.201.198.82:3000/info");
+>>>>>>> 1966e9a61bf352736787565e911dbf6633a1eeb5
         xhttp.send();
     }
     function inspect() {
@@ -121,10 +133,20 @@ function kd() {
         xhttp.onload = function () {
             document.getElementById("d3").innerHTML = this.responseText;
         }
+<<<<<<< HEAD
         xhttp.open("GET", "http://65.2.137.189:3000/inspect" );
         xhttp.send();
     }
     </script>
+=======
+        xhttp.open("GET", "http://44.201.198.82:3000/inspect" );
+        xhttp.send();
+    }
+</script>
+
+
+
+>>>>>>> 1966e9a61bf352736787565e911dbf6633a1eeb5
 
     <!-- <marquee id="m1" behavior="" direction="">
         <h1>Welcome to my container Service <br></h1>
