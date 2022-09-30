@@ -12,6 +12,7 @@ app.get("/output", (req,res)=>{
     const img = req.query.img;
     exec("docker run -dit --name  " + cname + " " + img,(err,stdout,stderr)=>{
         res.send("<pre>" + stdout + "</pre>" ); 
+
 	})
 })
 
