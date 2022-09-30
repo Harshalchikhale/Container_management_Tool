@@ -1,7 +1,7 @@
 const express = require("express")
 const { exec } = require("child_process")
 const app = express()
-app.get("/index",(req,res)=>{
+app.get("/",(req,res)=>{
             res.sendFile(__dirname + "/form.html")
 })
 app.get("/output", (req,res)=>{
