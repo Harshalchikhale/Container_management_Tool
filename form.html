@@ -105,16 +105,18 @@ function kd() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             document.getElementById("d1").innerHTML = this.responseText;
+	    console.log(this.responseText)
         }
-        xhttp.open("GET", "http://172.31.81.129:3000/output?cname="+ cname +"&img=" + cimg);
+        xhttp.open("GET", "http://44.201.198.82:3000/output?cname="+ cname +"&img=" + cimg);
         xhttp.send();
     }
     function ps() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             document.getElementById("d2").innerHTML = this.responseText;
+
         }
-        xhttp.open("GET", "http://172.31.81.129:3000/info");
+        xhttp.open("GET", "http://44.201.198.82:3000/info");
         xhttp.send();
     }
     function inspect() {
@@ -122,7 +124,7 @@ function kd() {
         xhttp.onload = function () {
             document.getElementById("d3").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "http://172.31.81.129:3000/inspect" );
+        xhttp.open("GET", "http://44.201.198.82:3000/inspect" );
         xhttp.send();
     }
 </script>
