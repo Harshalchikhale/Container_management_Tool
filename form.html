@@ -66,17 +66,17 @@
      justify-content: space-between;
      padding:10px;
 }
-form input {
+.form-div input {
     margin:10px 0 10px 0 ;
     padding: 5px;
 }
 
-form select{
+.form-div select{
     margin:10px 0 10px 0 ;
     padding: 5px;
 }
 
-form button {
+.form-div button {
     margin:10px 0 10px 0 ;
     padding: 5px;
     background-color: #0db7ed;
@@ -97,7 +97,34 @@ form button {
 </style>
 </head>
 <body>
-<script src="./script.js"></script>
+<script>
+function kd() {
+    let cname = document.getElementById("in1").value;
+    let cimg = document.getElementById("s1").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            document.getElementById("d1").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "http://65.2.137.189:3000/output?cname="+ cname +"&img=" + cimg);
+        xhttp.send();
+    }
+    function ps() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            document.getElementById("d2").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "http://65.2.137.189:3000/info");
+        xhttp.send();
+    }
+    function inspect() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            document.getElementById("d3").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "http://65.2.137.189:3000/inspect" );
+        xhttp.send();
+    }
+    </script>
 
     <!-- <marquee id="m1" behavior="" direction="">
         <h1>Welcome to my container Service <br></h1>
@@ -140,7 +167,7 @@ form button {
     </div>
     <div class="box-div">
         <div class="Form-cont">
-            <form>
+            <div class="form-div">
                 <label >
                     Enter Container Name :-
                 </label>
@@ -161,7 +188,7 @@ form button {
                     </option>
                 </select>
                 <button  onclick="kd()">Create Container</button>
-            </form>
+            </div>
         </div>
         <div class="instance-id-div">
             <div id="d1" >jg</div>
